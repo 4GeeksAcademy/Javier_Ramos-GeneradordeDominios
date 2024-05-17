@@ -10,24 +10,24 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
 
-let generadordominio = () => {
+let generadorDominio = () => {
   let pronombre = ["el", "nuestro", "este"];
   let adjetivo = ["increible", "absurdo", "gran", "bizarro"];
   let sustantivo = ["buscador", "blog", "navegador", "almacen", "consultor"];
   let extension = [".com", ".es", ".net"];
 
-  let numpronombre = Math.floor(Math.random() * 3);
-  let numadjetivo = Math.floor(Math.random() * 4);
-  let numsustantivo = Math.floor(Math.random() * 5);
-  let numextension = Math.floor(Math.random() * 3);
+  let numberPronombre = Math.floor(Math.random() * pronombre.length);
+  let numberAdjetivo = Math.floor(Math.random() * adjetivo.length);
+  let numberSustantivo = Math.floor(Math.random() * sustantivo.length);
+  let numberExtension = Math.floor(Math.random() * extension.length);
 
   return console.log(
     "www." +
-      pronombre[numpronombre] +
-      adjetivo[numadjetivo] +
-      sustantivo[numsustantivo] +
-      extension[numextension]
+      pronombre[numberPronombre] +
+      adjetivo[numberAdjetivo] +
+      sustantivo[numberSustantivo] +
+      extension[numberExtension]
   );
 };
 
-generadordominio();
+generadorDominio();
